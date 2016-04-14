@@ -23,7 +23,7 @@ io.on('connection', function( sock ) {
   })
 
   sock.on('disconnect', function( data ){
-    console.log("Unknown user disconnected.");
+    console.log("User disconnected.");
   })
 
 })
