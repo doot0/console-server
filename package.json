@@ -1,6 +1,6 @@
 {
   "name": "conch-server",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Server component for Conch - webchat, but in your devtools.",
   "main": "index.js",
   "scripts": {
