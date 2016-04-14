@@ -18,5 +18,8 @@
   "homepage": "https://github.com/doot0/conch-server#readme",
   "devDependencies": {
     "nodemon": "^1.9.1"
+  },
+  "dependencies": {
+    "socket.io": "^1.4.5"
   }
 }
