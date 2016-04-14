@@ -1,16 +1,16 @@
 var io = require('socket.io')(8432)
 
-io.on('connection', function( sock ) {
+io.sockets.on('connection', function( sock ) {
 
   sock.on('user connect', function( data ){
     console.log(data.username + ', ' + data.uuid + ' connected')
-    io.emit('user connect', data);
+    io.sockets.emit('user connect', data);
   })
 
   sock.on('user namechange', function( data ){
     console.log(data.old + " changed their name to " + data.new)
 
-    io.emit('user namechange', {
+    io.sockets.emit('user namechange', {
       old: data.old,
       new: data.new
     })
@@ -19,7 +19,7 @@ io.on('connection', function( sock ) {
 
   sock.on('message', function( data ){
     console.log(data)
-    io.emit('message', data)
+    io.sockets.emit('message', data)
   })
 
   sock.on('disconnect', function( data ){
